@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    font-family: "Ubuntu", sans-serif !important;
+}
+
+
+.loader-hide {
+    display: none;
+}
+
+@layer base {
+
+    button {
+        @apply hover:scale-110 rounded-2xl focus:outline-none focus:scale-110 active:scale-95 duration-200
+    }
+
+    textarea {
+        @apply bg-white rounded-2xl w-full p-3 focus:outline-none min-h-40
+    }
+}

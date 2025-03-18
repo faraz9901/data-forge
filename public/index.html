@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>Data Forge</title>
+</head>
+
+<body class="bg-gradient-to-tr font-medium min-h-screen from-teal-400 to-green-300 text-teal-900 scroll-smooth ">
+
+    <div class="mx-auto shadow-2xl  max-w-[1080px] rounded-2xl">
+        <!-- HEADER -->
+        <header class="  p-5 rounded-t-md border-b border-b-white  flex justify-between items-center">
+            <h1 class="lg:text-5xl text-lg   font-extrabold">Data Forge</h1>
+        </header>
+        <!-- END HEADER -->
+
+        <main class="px-5  py-2 flex flex-col gap-10">
+            <!-- Summarizer -->
+            <section class=" flex flex-col gap-3">
+                <h2 class="lg:text-3xl font-bold">Summarizer</h2>
+                <div class="grid lg:grid-cols-2 gap-2">
+                    <form id="summarizer" class="flex flex-col gap-2">
+                        <textarea name="text" placeholder="Enter text to summarize"></textarea>
+                        <div class="self-end flex gap-3">
+                            <button type="button" id="copy-summarizer"
+                                onclick="copy('output-summarizer' , 'summarizer' )"
+                                class="bg-teal-900  text-white p-3">Copy</button>
+                            <button class="bg-orange-400   text-white p-3">Summarize</button>
+                        </div>
+                    </form>
+                    <div class="bg-white rounded-2xl h-fit hidden p-3  text-black" id="output-summarizer"></div>
+                </div>
+            </section>
+
+            <!-- Mock Data -->
+            <section class="flex flex-col gap-3">
+
+                <h3 class="lg:text-3xl font-bold">Mock Data</h3>
+                <div class="grid lg:grid-cols-2 gap-2">
+                    <form id="mock-data" class="flex flex-col gap-2">
+                        <textarea name="schema" placeholder="Give the schema of the  data"></textarea>
+
+                        <div class="self-end flex gap-3">
+                            <button type="button" id="copy-mock-data" onclick="copy('output-mock-data' , 'mock-data' )"
+                                class="bg-teal-900  text-white p-3">Copy</button>
+                            <button class="bg-orange-400  p-3 text-white ">Generate</button>
+                        </div>
+                    </form>
+                    <div class="bg-white rounded-2xl h-fit hidden p-3  text-black" id="output-mock-data"></div>
+                </div>
+
+            </section>
+
+            <!-- Loader  -->
+            <div class="fixed loader-hide top-4 right-4  flex justify-center items-center " id="loader">
+                <div
+                    class="gap-3 items-center justify-center rounded-2xl  flex h-[60px] w-[150px] bg-[#131212be] text-white ">
+                    <div class="relative w-5 h-5">
+                        <div class="absolute border-4  border-t-green-900 rounded-full w-full h-full animate-spin">
+                        </div>
+                    </div>
+                    Processing...
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="p-5 text-center border-t border-t-white">
+            Designed and
+            Developed By Mohammed Faraz
+        </footer>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/index.js"></script>
+</body>
+
+</html>
