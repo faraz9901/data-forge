@@ -17,7 +17,8 @@ document
     .addEventListener('submit', (event) => {
         event.preventDefault();
         const schema = event.target.schema.value;
-        socket.emit('create-mock-data', { schema });
+        const count = event.target.count.value;
+        socket.emit('create-mock-data', { schema, count });
         toast(true)
     });
 

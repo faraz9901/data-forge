@@ -51,7 +51,12 @@
                 <div class="grid lg:grid-cols-2 gap-2">
                     <form id="mock-data" class="flex flex-col gap-2">
                         <textarea name="schema" placeholder="Give the schema of the  data"></textarea>
-
+                        <div>
+                            <label>
+                                Number of records
+                            </label>
+                            <input type="number" name="count" class="mt-3" placeholder="Number of records" />
+                        </div>
                         <div class="self-end flex gap-3">
                             <button type="button" id="copy-mock-data" onclick="copy('output-mock-data' , 'mock-data' )"
                                 class="bg-teal-900  text-white">Copy</button>
