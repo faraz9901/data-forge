@@ -22,22 +22,22 @@
     <div class="mx-auto shadow-2xl  max-w-[1080px] rounded-2xl">
         <!-- HEADER -->
         <header class="  p-5 rounded-t-md border-b border-b-white  flex justify-between items-center">
-            <h1 class="lg:text-5xl text-lg   font-extrabold">Data Forge</h1>
+            <h1 class="lg:text-4xl text-2xl   font-extrabold">Data Forge</h1>
         </header>
         <!-- END HEADER -->
 
         <main class="px-5  py-2 flex flex-col gap-10">
             <!-- Summarizer -->
             <section class=" flex flex-col gap-3">
-                <h2 class="lg:text-3xl font-bold">Summarizer</h2>
+                <h2 class="lg:text-2xl text-xl font-bold">Summarizer</h2>
                 <div class="grid lg:grid-cols-2 gap-2">
                     <form id="summarizer" class="flex flex-col gap-2">
                         <textarea name="text" placeholder="Enter text to summarize"></textarea>
                         <div class="self-end flex gap-3">
                             <button type="button" id="copy-summarizer"
                                 onclick="copy('output-summarizer' , 'summarizer' )"
-                                class="bg-teal-900  text-white p-3">Copy</button>
-                            <button class="bg-orange-400   text-white p-3">Summarize</button>
+                                class="bg-teal-900  text-white">Copy</button>
+                            <button class="bg-orange-400   text-white ">Summarize</button>
                         </div>
                     </form>
                     <div class="bg-white rounded-2xl h-fit hidden p-3  text-black" id="output-summarizer"></div>
@@ -47,15 +47,15 @@
             <!-- Mock Data -->
             <section class="flex flex-col gap-3">
 
-                <h3 class="lg:text-3xl font-bold">Mock Data</h3>
+                <h3 class="lg:text-2xl text-xl font-bold">Mock Data</h3>
                 <div class="grid lg:grid-cols-2 gap-2">
                     <form id="mock-data" class="flex flex-col gap-2">
                         <textarea name="schema" placeholder="Give the schema of the  data"></textarea>
 
                         <div class="self-end flex gap-3">
                             <button type="button" id="copy-mock-data" onclick="copy('output-mock-data' , 'mock-data' )"
-                                class="bg-teal-900  text-white p-3">Copy</button>
-                            <button class="bg-orange-400  p-3 text-white ">Generate</button>
+                                class="bg-teal-900  text-white">Copy</button>
+                            <button class="bg-orange-400   text-white ">Generate</button>
                         </div>
                     </form>
                     <div class="bg-white rounded-2xl h-fit hidden p-3  text-black" id="output-mock-data"></div>
@@ -77,7 +77,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="p-5 text-center border-t border-t-white">
+        <footer class="p-5 text-sm lg:text-base text-center border-t border-t-white">
             Designed and
             Developed By Mohammed Faraz
         </footer>
