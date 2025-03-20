@@ -35,8 +35,9 @@ socket.on('summarized', (data) => {
             output.textContent += letter;
         }, 1000);
     }
-
+    document.getElementById('copy-summarizer').textContent = "Copy"
     toast(false)
+
 })
 
 socket.on('mock-data', (data) => {
@@ -49,7 +50,7 @@ socket.on('mock-data', (data) => {
             output.textContent += letter;
         }, 1000);
     }
-
+    document.getElementById('copy-mock-data').textContent = "Copy"
     toast(false)
 })
 
